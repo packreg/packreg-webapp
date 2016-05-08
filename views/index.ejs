@@ -1,0 +1,24 @@
+<% include header %>
+  
+  <section class="result">
+    <div class="result-wrap">
+      <ul class="result-list">
+        <%
+        packages.forEach(function(package, index) {
+        %>
+          <li class="result-list-single">
+            <a href="<%= package.url.replace('git://', 'https://') %>" class="result-list-single-link">
+              <h2><%= package.name %></h2>
+              <p class="desc">
+                Bower is the package manager for the frontend web.
+              </p>
+            </a>
+          </li>
+        <%
+          });
+        %>
+      </ul>
+    </div>
+  </section>
+
+<% include footer %>

@@ -1,0 +1,144 @@
+/*
+*
+* main-dark: #414A52
+* main-bright: #F4F6F9;
+* main-gradient: #BFE39A to #A2ABE3
+*
+*/
+
+*,
+ul { 
+  margin: 0;
+  padding: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+html,
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+h1{    
+  width: 120px;
+  height: 100px;
+  margin: 0 auto;
+  line-height: 0.9;
+  padding-left: 120px;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  color: #414A52;
+}
+
+h1:before{
+  position: absolute;
+  content: " ";
+  width: 120px;
+  height: 75px;
+  margin: -15px 0 0 -120px;
+  background-image: url("../img/packages-logo-large.png");
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;  
+}
+
+.mainnav{
+  width: 100%;
+  height: 35px;
+  background-color: #414A52;
+}
+
+.mainnav-list{
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.mainnav-list-item{
+  float: right;
+  display: inline-block;
+  margin: 0 15px;
+  padding-top: 6px;
+}
+
+.mainnav-list-item a{
+  color: #D3D3D3;
+  text-decoration: none;
+}
+
+.intro{
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: -webkit-linear-gradient(183deg, #BFE39A 0%, #A2ABE3 100%);
+  background-image: -o-linear-gradient(183deg, #BFE39A 0%, #A2ABE3 100%);
+  background-image: linear-gradient(273deg, #BFE39A 0%, #A2ABE3 100%);
+}
+
+.intro:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  background-image: url("../img/texture-bg.png");
+  pointer-events: none;
+}
+
+.intro-wrap{
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.intro-search{
+  padding: 5px;
+  height: 25px;
+  width: 440px;
+}
+
+.result{
+  background-color: #F4F6F9;
+  min-height: 600px;
+  padding: 20px 0;
+}
+
+.result-wrap{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.result-list{
+  list-style: none;
+}
+
+.result-list-single{
+  width: 100%;
+  height: 120px;
+  margin: 25px 0;
+  border-radius: 2px;
+  border: 1px solid #979797;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.result-list-single-link{
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.result-list-single-link h2{
+  color: #76A7D6;
+  padding: 20px 0 0 20px;
+}
+
+.result-list-single-link .desc{
+  color: #414A52;
+  padding: 5px 0 0 20px;
+}
+
