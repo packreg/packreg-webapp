@@ -9,6 +9,7 @@ var express = require('express'),
 * Displays main search site.
 * =========================================== */
 router.get('/', function(req, res, next) {
+
   api.searchPackage("Bower", function(err, packages){
     if(err){
       console.log(err);
@@ -18,8 +19,6 @@ router.get('/', function(req, res, next) {
     for(var i in packages){
       packArray.push(packages[i]);
     }
-
-    console.log(packArray);
 
     res.render('index', {
       query: "Bower",
@@ -51,9 +50,11 @@ router.post('/search', function(req, res, next) {
       packages: packArray
     });
 
-
   });
 });
 
+
+// get single package
+// api.getPackageBy("name", "d3", function(err, package){ ...
 
 module.exports = router;

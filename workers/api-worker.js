@@ -24,3 +24,14 @@ exports.searchPackage = function(packageName, callback) {
     callback(null, packages);
   });
 };
+
+
+/* =============================================
+* Search package by identifier
+* =========================================== */
+exports.getPackageBy = function(method, identifier, callback) {
+  model.get(["packages", "by", method, identifier]).then(function(response) {
+    var package = response.json.packages.by[method];
+    callback(null, package);
+  });
+};
