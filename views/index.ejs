@@ -1,18 +1,27 @@
 <% include header %>
-  
+
   <section class="result">
     <div class="result-wrap">
       <ul class="result-list">
         <%
         packages.forEach(function(package, index) {
         %>
-          <li class="result-list-single">
-            <a href="<%= package.url.replace('git://', 'https://') %>" class="result-list-single-link">
-              <h2><%= package.name %></h2>
-              <p class="desc">
-                Bower is the package manager for the frontend web.
-              </p>
-            </a>
+          <li class="result-list-single clearfix">
+            <h2><a href="<%= package.url.replace('git://', 'https://') %>" class="result-list-single-link"><%= package.name %></a></h2>
+            <div class="array">
+              <div><span>"name": </span> <%= package.name %></div>
+              <div><span>"url": </span><%= package.url.replace('git://', 'https://') %></div>
+              <div><span>"homepage": </span><%= package.homepage %></div>
+              <div><span>"description": </span><%= package.description || "no description available yet..." %></div>
+              <div><span>"language": </span><%= package.language %></div>
+              <div><span>"created_at": </span><%= package.created_at %></div>
+              <div><span>"updated_at": </span><%= package.updated_at %></div>
+              <div><span>"stargazers_count": </span><%= package.stargazers_count %></div>
+              <div><span>"subscribers_count": </span><%= package.subscribers_count %></div>
+              <div><span>"watchers_count": </span><%= package.watchers_count %></div>
+              <div><span>"forks_count": </span><%= package.forks_count %></div>
+              <div><span>"forks_count": </span><%= package.forks_count %></div>
+            </div>
           </li>
         <%
           });

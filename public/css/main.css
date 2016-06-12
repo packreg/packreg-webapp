@@ -20,7 +20,7 @@ body{
   font-weight: 400;
 }
 
-h1{    
+h1{
   width: 120px;
   height: 100px;
   margin: 0 auto;
@@ -41,7 +41,7 @@ h1:before{
   background-position: center;
   -webkit-background-size: contain;
   background-size: contain;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
 }
 
 .mainnav{
@@ -117,28 +117,94 @@ h1:before{
 
 .result-list-single{
   width: 100%;
-  height: 120px;
-  margin: 25px 0;
+  min-height: 150px;
+  margin: 100px 0;
   border-radius: 2px;
-  border: 1px solid #979797;
-  background-color: #fff;
-  text-decoration: none;
-}
-
-.result-list-single-link{
   text-decoration: none;
   display: block;
-  width: 100%;
-  height: 100%;
+  position: relative;
 }
 
-.result-list-single-link h2{
-  color: #76A7D6;
-  padding: 20px 0 0 20px;
+.result-list-single h2{
+  display: inline-block;
+  float: left;
+  width: 30%;
+  text-align: right;
+  font-weight: 400;
+  font-size: 22px;
+  text-overflow: ellipsis;
 }
 
-.result-list-single-link .desc{
+.result-list-single h2 a {
+  text-decoration: none;
   color: #414A52;
-  padding: 5px 0 0 20px;
+  font-weight: 400;
+  font-size: 22px;
+  border-bottom:  1px dotted #ccc;
+  text-overflow: ellipsis;
 }
 
+.result-list-single .array{
+  color: #414A52;
+  text-decoration: none;
+  display: inline-block;
+  float: right;
+  width: 70%;
+  padding-top: 7px;
+}
+
+.result-list-single .array:before{
+  content: "{";
+  position: absolute;
+  margin: -15px 0 0 20px;
+  color: #D3D3D3;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.result-list-single .array:after{
+  content: "}";
+  position: absolute;
+  margin: -25px 0 0 20px;
+  color: #D3D3D3;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+
+
+.result-list-single .array div{
+  padding-left: 40px;
+  font-family: monospace;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.result-list-single .array div span{
+  color: #7499bb;
+}
+
+.result-list-single .array div:first-of-type{
+  margin-top: 25px;
+}
+
+.result-list-single .array div:last-of-type{
+  margin-bottom: 25px;
+}
+
+.result-list-single .array div.name{
+
+}
+
+
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}

@@ -1,7 +1,7 @@
 var express = require('express'),
     router = express.Router(),
     bodyParser = require('body-parser'),
-    api = require('../workers/api-worker'),
+    api = require('../workers/api-worker.js'),
     config = require('../config/config');
 
 
